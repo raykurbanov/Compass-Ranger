@@ -1,0 +1,484 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.509);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+html {
+  font-family: "Noto Serif HK", serif;
+}
+
+#myMap {
+  height: 35vh;
+  width: 100%;
+  border: 1px solid black;
+  position: relative;
+}
+
+h1 {
+  color: blue;
+}
+
+#svg {
+  display: flex;
+  height: 80%;
+  width: 80%;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+svg g path {
+  transition: 0.3s all ease-in-out;
+}
+
+svg g path:hover {
+  fill: rgb(45, 185, 240);
+  cursor: pointer;
+  transition: 0.2s all ease;
+  transform: scale(1.006);
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  border: none;
+  height: 600px;
+  margin-bottom: 25px;
+}
+
+.parkList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 55%;
+  border-right: 1px solid black;
+  align-items: center;
+  height: 80vh;
+}
+
+.park {
+  width: 45%;
+  height: 80vh;
+}
+
+.weather {
+  height: 50%;
+  width: 100%;
+  background-color: rgba(192, 238, 240, 0.484);
+}
+
+.images {
+  height: 50%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.nav-wrapper {
+  background-color: darkgreen;
+}
+
+c .page-footer {
+  display: flex;
+  height: 6vh;
+  background-color: darkgreen;
+}
+
+.brand-logo {
+  margin-left: 1.5em;
+  font-family: "Noto Serif HK", serif;
+}
+
+/* .nav-wrapper img {
+  max-width: 10%;
+  max-height: 100%;
+
+} */
+
+.card {
+  margin-right: 2em;
+}
+
+.collMenu {
+  width: 60%;
+}
+
+.slidePic {
+  height: 100px;
+  width: 40%;
+}
+
+.infoContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.navbar-fixed {
+  position: relative;
+  z-index: 999999;
+}
+
+.hidden {
+  display: none;
+}
+
+.navbar-fixed {
+  position: relative;
+  z-index: 999999;
+}
+
+.hidden {
+  display: none;
+}
+
+.parkContent {
+  border-bottom: 1px solid black;
+  padding: 2px 7px;
+  width: 95%;
+}
+
+.description {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  line-height: 1.3rem;
+}
+
+.info {
+  font-size: 12px;
+}
+
+.parkContent:nth-of-type(1) {
+  margin-top: 1.5%;
+}
+
+nav img {
+  width: 80px;
+  height: 65px;
+}
+
+.mainWrap {
+  width: 100%;
+  height: 90vh;
+  opacity: 1;
+  position: relative;
+}
+
+.weather-wrapper-1 {
+  display: flex;
+  height: 45%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.weather-wrapper-2 {
+  display: flex;
+
+  height: 55%;
+  width: 100%;
+  border: 1px solid black;
+}
+
+.forecastdata {
+  font-size: 12px;
+  padding: 3px;
+  width: 20%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+.mainweatherdata {
+  width: 35%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.forecasticon,
+.forecastdate {
+  text-align: center;
+}
+
+.forecasttemp {
+  padding-top: 15px;
+}
+
+#icondata {
+  width: 25%;
+  height: 100%;
+  border: 1px solid black;
+}
+
+#additionaldata {
+  width: 40%;
+  height: 100%;
+  border: 1px solid black;
+  padding: 5px;
+}
+
+.images img {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: bottom;
+  transition: 0.3s all ease-in-out;
+  object-fit: cover;
+}
+
+#icondata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: none;
+}
+
+#icondata img {
+  width: 75%;
+  height: 75%;
+  background-size: cover;
+}
+
+.description a {
+  cursor: pointer;
+  text-decoration: none;
+  background: rgb(4, 125, 150);
+  padding: 1px 5px;
+  color: rgb(255, 255, 255);
+  border-radius: 5px;
+  margin-left: 2px;
+}
+
+.description a:hover {
+  background-color: rgb(15, 203, 203);
+}
+
+.description a:active {
+  transform: scale(0.95);
+}
+
+.parklist .parkName:hover {
+  cursor: pointer;
+  color: rgb(4, 4, 4);
+}
+
+.forecastdate {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.forecasttemp,
+.forecastprecip,
+.forecastwind {
+  font-weight: bold;
+}
+
+#locationName {
+  font-weight: bold;
+}
+
+.parkName {
+  display: inline-block;
+  margin-top: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: rgba(4, 4, 4, 0.6);
+  font-family: "Oleo Script Swash Caps", cursive;
+}
+
+.parkName:hover {
+  color: black;
+  cursor: pointer;
+}
+
+.stateNames {
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-size: 18px;
+  color: rgba(4, 4, 4, 0.6);
+  margin: auto;
+  /* padding: 1em; */
+}
+
+.saveBtn {
+  display: inline-block;
+}
+
+.saveBtn:active {
+  transform: scale(0.9);
+}
+
+/* minga contact style--------> */
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  background-color: darkgreen;
+  padding: 0 30px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.brand__logo {
+  font-size: 35px;
+  color: white;
+}
+
+#contact__container {
+  position: absolute;
+  width: 100%;
+  height: 693px;
+  opacity: 0.45;
+}
+
+.contact__container {
+  display: flex;
+}
+
+.develop__container {
+  margin-left: 50px;
+  margin-top: 150px;
+  height: 283px;
+  width: 90%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+}
+
+#develop__name {
+  border-radius: 10%;
+  transition: 0.3s;
+}
+
+#develop__name:hover {
+  transform: scale(1.1);
+  transition-duration: 0.3s;
+}
+.contact__icons {
+  width: 40px;
+  margin: 13px;
+  justify-content: center;
+}
+
+.icons__container {
+  display: flex;
+
+  justify-content: center;
+  padding-top: 17px;
+}
+
+.tooltip img:hover {
+  transition: 0.3s all ease-in-out;
+  transform: translate(5px, -5px);
+}
+
+.tooltip:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.develop__wish {
+  display: flex;
+  width: 600px;
+  margin: 40px auto;
+}
+
+.develop__text {
+  font-size: 30px;
+  color: black;
+  font-weight: 500;
+}
+
+.extension__btn {
+  margin: 10px;
+  color: white;
+}
+
+.navStateText {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#dropdown1 li {
+  display: flex;
+  width: 95%;
+  align-items: center;
+  justify-content: center;
+}
+
+#dropdown1 a {
+  width: 90% !important;
+}
+
+#dropdown1 {
+  display: flex !important;
+  flex-direction: column !important;
+  padding: 5px auto !important;
+  width: 300px !important;
+  left: 80vw !important;
+  top: 100% !important;
+  height: auto !important;
+}
+
+#dropdown1 a {
+  width: 150px;
+}
+#dropdown1.dropdown-content__contacts {
+  top: 68px !important;
+}
+.active {
+  background-color: rgb(4, 88, 23) !important;
+  padding: 25px 20px;
+}
+
+.extension__btn:hover {
+  background-color: rgb(4, 88, 23);
+}
+
+/* ticker-----> */
+.ticker {
+  padding-top: 470px;
+  font-size: 25px;
+}
+
+.logos {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+marquee span {
+  margin: 5px 5px;
+}
+
+#statement {
+  text-decoration: underline;
+  color: red;
+}
+
+#university {
+  font-weight: bold;
+  color: blue;
+}
+
+.mentorName {
+  font-weight: bold;
+}

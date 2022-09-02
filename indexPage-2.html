@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore The World!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Carter+One&family=Fugaz+One&family=Noto+Serif+HK:wght@200&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+    crossorigin="" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/index.css" />
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav class="">
+      <div class="nav-wrapper">
+        <a href="./index.html" class="brand-logo">Compass Ranger</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="./index.html">Select State</a></li>
+
+          <!-- Dropdown Trigger -->
+          <a class='dropdown-trigger btn green darken-3' href='#' data-target='dropdown1'
+            class="favorites">Favorites</a>
+
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+          </ul>
+          <li><a href="./indexPage-3.html">Contacts</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div id="myMap"></div>
+  <div class="content">
+    <div class="parkList">
+      <div class="parkContent hidden" id="0">
+        <h3 class="parkName" data-value=0></h3>
+        <a class="btn-floating btn-small green saveBtn"><i class="material-icons">add</i></a>
+        <h4 class="stateNames" data-value="0"></h4>
+
+        <p class="description"></p>
+      </div>
+      <div class="parkContent hidden" id="1">
+        <h3 class="parkName" data-value=1></h3>
+        <a class="btn-floating btn-small green saveBtn"><i class="material-icons">add</i></a>
+        <h4 class="stateNames" data-value="0"></h4>
+        <p class="description"></p>
+      </div>
+      <div class="parkContent hidden" id="2">
+        <h3 class="parkName" data-value=2></h3>
+        <a class="btn-floating btn-small green saveBtn"><i class="material-icons">add</i></a>
+        <h4 class="stateNames" data-value="0"></h4>
+        <p class="description"></p>
+      </div>
+      <div class="parkContent hidden" id="3">
+        <h3 class="parkName" data-value=3></h3>
+        <a class="btn-floating btn-small green saveBtn"><i class="material-icons">add</i></a>
+        <h4 class="stateNames" data-value="0"></h4>
+        <p class="description"></p>
+      </div>
+      <div class="parkContent hidden" id="4">
+        <h3 class="parkName" data-value=4></h3>
+        <a class="btn-floating btn-small green saveBtn"><i class="material-icons">add</i></a>
+        <h4 class="stateNames" data-value="0"></h4>
+        <p class="description"></p>
+      </div>
+    </div>
+    <div class="park">
+      <div class="weather">
+        <div class="weather-wrapper-1">
+          <div class="mainweatherdata">
+            <p id="locationName">
+              </h3>
+            <p id="temperature"></p>
+            <p id="sunrise"></p>
+            <p id="sunset"></p>
+          </div>
+          <div id="icondata"><img src="" alt=""></div>
+          <div id="additionaldata">
+            <p id="humidity"></p>
+            <p id="wind__direction"></p>
+            <p id="precipitations"></p>
+          </div>
+        </div>
+        <div class="weather-wrapper-2">
+          <div class="forecastdata" id="f0">
+            <p class="forecastdate"></p>
+            <div class="forecasticon"><img src="" alt="" style="width: 40px; height:40px"></div>
+            <p class="forecasttemp"></p>
+            <p class="forecastwind"></p>
+            <p class="forecastprecip"></p>
+
+          </div>
+          <div class="forecastdata" id="f1">
+            <p class="forecastdate"></p>
+            <div class="forecasticon"><img src="" alt="" style="width: 40px; height:40px"></div>
+            <p class="forecasttemp"></p>
+            <p class="forecastwind"></p>
+            <p class="forecastprecip"></p>
+          </div>
+          <div class="forecastdata" id="f2">
+            <p class="forecastdate"></p>
+            <div class="forecasticon"><img src="" alt="" style="width: 40px; height:40px"></div>
+            <p class="forecasttemp"></p>
+            <p class="forecastwind"></p>
+            <p class="forecastprecip"></p>
+          </div>
+          <div class="forecastdata" id="f3">
+            <p class="forecastdate"></p>
+            <div class="forecasticon"><img src="" alt="" style="width: 40px; height:40px"></div>
+            <p class="forecasttemp"></p>
+            <p class="forecastwind"></p>
+            <p class="forecastprecip"></p>
+          </div>
+          <div class="forecastdata" id="f4">
+            <p class="forecastdate"></p>
+            <div class="forecasticon"><img src="" alt="" style="width: 40px; height:40px"></div>
+            <div class="forecasticon"></div>
+            <p class="forecasttemp"></p>
+            <p class="forecastwind"></p>
+            <p class="forecastprecip"></p>
+          </div>
+        </div>
+      </div>
+      <div class="images">
+        <img src="" alt="">
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/indexPage-2.js"></script>
+</body>
+
+</html>
